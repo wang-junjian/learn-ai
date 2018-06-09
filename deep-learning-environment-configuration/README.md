@@ -138,8 +138,8 @@ wget https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-baz
 sudo mv vbatts-bazel-epel-7.repo /etc/yum.repos.d/
 sudo yum install bazel
 ```
-    * [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
-    * [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
+* [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
+* [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
 
 * Configure
 ```shell
@@ -248,24 +248,30 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.wh
 
 ## FAQ
 * 安装失败。错误信息：`Warning: /dev/root does not exist` 解决方法：
-    1. 查看U盘启动盘的文件名，在命令行输入：`ls /dev`，我的U盘文件名是sdb4。
+
+    * 查看U盘启动盘的文件名，在命令行输入：`ls /dev`，我的U盘文件名是sdb4。
         > 如果不知道的话，可以运行一次命令，然后拔下U盘，再运行一次命令，对比两次的结果，看看少了哪个文件名。
-    2. 重启系统，回到CentOS安装菜单，在菜单项 Install CentOS 7 按 e 键进行编辑模式，修改`linuxefi /images/vmlinuz inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet` 为 `linuxefi /images/vmlinuz inst.stage2=hd:/dev/sdb4 quiet`
-    3. 按`ctrl+x`，重启系统。
+    * 重启系统，回到CentOS安装菜单，在菜单项 Install CentOS 7 按 e 键进行编辑模式，修改`linuxefi /images/vmlinuz inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet` 为 `linuxefi /images/vmlinuz inst.stage2=hd:/dev/sdb4 quiet`
+    * 按`ctrl+x`，重启系统。
 
 * import tensorflow 失败。错误信息：`ImportError: cannot import name 'abs'` 解决方法：
+    
     > 详细错误信息
+    
     > File "/usr/lib/python3.6/site-packages/tensorflow/python/keras/backend/__init__.py", line 22, in <module>
+    
     > from tensorflow.python.keras._impl.keras.backend import abs
+    
     > ImportError: cannot import name 'abs'
 
     **可能同时安装了 CPU 和 GPU 版的 TensorFlow**
-    1. 卸载 TensorFlow CPU 和 GPU 版本
+    
+    * 卸载 TensorFlow CPU 和 GPU 版本
     ```shell
     sudo pip uninstall tensorflow
     sudo pip uninstall tensorflow-gpu 
     ```
-    2. 安装 TensorFlow GPU 版本
+    * 安装 TensorFlow GPU 版本
     ```shell
     sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl 
     ```
