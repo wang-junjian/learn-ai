@@ -139,9 +139,6 @@ sudo mv vbatts-bazel-epel-7.repo /etc/yum.repos.d/
 sudo yum install bazel
 ```
 
-    * [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
-    * [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
-
 * Configure
 ```shell
 ./configure 
@@ -294,5 +291,7 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.wh
 * [tensorflow之cifar10练习](https://www.jianshu.com/p/81edb51128fc)
 * [TensorRT简介](https://blog.csdn.net/fengbingchun/article/details/78469551)
 * [What is SYCL 1.2?](https://stackoverflow.com/questions/41831214/what-is-sycl-1-2/41877617)
-* []()
+* [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
+* [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
 * [深度学习指南：基于Ubuntu从头开始搭建环境](https://blog.csdn.net/happytofly/article/details/80123546)
+* []()
