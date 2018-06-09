@@ -1,9 +1,10 @@
 # 深度学习环境配置
 
-> 操作系统：CentOS7
-> 显卡：GTX 1060 6G
-> CPU：八代 i5-8400
-> 内存：16G
+## 系统环境
+* 操作系统：CentOS7
+* 显卡：GTX 1060 6G
+* CPU：八代 i5-8400
+* 内存：16G
 
 ## 安装 CentOS7
 * 下载 [CentOS](https://www.centos.org/download/)
