@@ -1,5 +1,9 @@
 # 深度学习环境配置
-> 操作系统：CentOS7 显卡：GTX 1060 6G
+
+> 操作系统：CentOS7
+> 显卡：GTX 1060 6G
+> CPU：八代 i5-8400
+> 内存：16G
 
 ## 安装 CentOS7
 * 下载 [CentOS](https://www.centos.org/download/)
@@ -227,6 +231,7 @@ sudo yum install bazel
 ```
 
 * Build
+**编译花了1个小时，内存使用6G左右，6核满负核运行，温度在70度上下**
 ```shell
 bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
     ......
@@ -255,8 +260,8 @@ git clone https://github.com/tensorflow/models.git
 cd models/tutoricals/image/cifar10
 python3 cifar10_train.py
 ```
-![](tensorflow_training_cifar10_gpu.png)
 **训练 cifar10 GPU使用情况：内存不够用，GPU处理器85％左右，带宽使用了20％**
+![](tensorflow_training_cifar10_gpu.png)
 
 ## FAQ
 * 安装失败。错误信息：`Warning: /dev/root does not exist` 解决方法：
@@ -267,6 +272,7 @@ python3 cifar10_train.py
     * 按`ctrl+x`，重启系统。
 
 * import tensorflow 失败。
+
 **错误信息：**
 ```
     File "/usr/lib/python3.6/site-packages/tensorflow/python/keras/backend/__init__.py", line 22, in <module>    
@@ -294,20 +300,53 @@ python3 cifar10_train.py
 * [U盘安装centos7解决could not boot，/dev/root/does not exit](https://blog.csdn.net/u012140170/article/details/40423645)
 * [u盘安装centos7 /dev/root does not exist 导致无法安装解决方案](https://blog.csdn.net/bajiudongfeng/article/details/47732377)
 
-* [CentOS 7.0 下 GPU 安装配置指南及 TensorFlow / Openface 的 GPU 使用](https://www.jianshu.com/p/75e7053bdd43)
-* [centos7下安装部署tensorflow GPU 版本](https://cloud.tencent.com/info/be0c8667decbadc9588cd68e5289cfd3.html)
-* [Installing tensorflow-gpu on CentOS 6.8](https://stackoverflow.com/questions/45081855/installing-tensorflow-gpu-on-centos-6-8)
 * [NVIDIA cuda7在centos6.5中的安装](https://blog.csdn.net/syx19930206/article/details/47253861)
-
-* [lspci命令](http://man.linuxde.net/lspci)
 * [CentOS中禁用nouveau驱动](https://blog.csdn.net/cmzsteven/article/details/49049327)
 * [centos关机与重启命令](https://www.cnblogs.com/endv/p/6622452.html)
 * [CentOS 7中以runfile形式安装CUDA 9.0](https://www.cnblogs.com/alliance/p/7905657.html)
 * [什么方式可以实现init3方式启动又能快速使用图形](http://tieba.baidu.com/f?kz=2065847097&mo_device=1&ssid=0&from=1000539d&uid=0&pu=usm@1,sz@1320_2001,ta@iphone_1_11.3_3_605&bd_page_type=1&baiduid=00D058CFE90959DB7374FA43FDE5A43E&tj=www_normal_3_0_10_title&referer=m.baidu.com?pn=0&&red_tag=p0293373883)
-* [tensorflow之cifar10练习](https://www.jianshu.com/p/81edb51128fc)
+
+* [lspci命令](http://man.linuxde.net/lspci)
 * [TensorRT简介](https://blog.csdn.net/fengbingchun/article/details/78469551)
 * [What is SYCL 1.2?](https://stackoverflow.com/questions/41831214/what-is-sycl-1-2/41877617)
+
 * [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
 * [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
+
+* [CentOS 7.0 下 GPU 安装配置指南及 TensorFlow / Openface 的 GPU 使用](https://www.jianshu.com/p/75e7053bdd43)
+* [centos7下安装部署tensorflow GPU 版本](https://cloud.tencent.com/info/be0c8667decbadc9588cd68e5289cfd3.html)
+* [Installing tensorflow-gpu on CentOS 6.8](https://stackoverflow.com/questions/45081855/installing-tensorflow-gpu-on-centos-6-8)
+* [tensorflow之cifar10练习](https://www.jianshu.com/p/81edb51128fc)
+
+* [cuda和GPU驱动安装](http://blog.sina.com.cn/s/blog_710dba0d0102wfs7.html)
+* [CentOS 7 Tensorflow-GPU 安装遇到的坑记录](https://www.jianshu.com/p/3d4a795e7b69)
+* [Centos 安装cuda](https://blog.csdn.net/zijin0802034/article/details/54575067)
+* [双显卡独显驱动问题](https://bbs.deepin.org/forum.php?mod=viewthread&tid=136564)
+* [centos 7 下安装cuDNN](https://blog.csdn.net/yaoqiwaimai/article/details/78594154)
+* [CentOS yum的详细使用方法](https://www.cnblogs.com/xuange306/p/6049481.html)
+* [centos 7 yum 安装 python3](https://www.cnblogs.com/elodio/p/4900160.html)
+* [CentOS7安装EPEL的两种方式](http://www.mamicode.com/info-detail-1671603.html)
+* [Centos7下python3安装pip-9.0.1](https://www.cnblogs.com/chengd/p/7078588.html)
+* [centos6下同时安装python2和python3](https://www.cnblogs.com/lawlietfans/p/8613974.html)
+* [ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory when installing tensor flow on Ubuntu 16.04.03](https://stackoverflow.com/questions/49115391/importerror-libcublas-so-9-0-cannot-open-shared-object-file-no-such-file-or-d)
+* [tensorflow-gpu版本的编译](http://windywinter.cn/2018/03/10/ML/tensorflow-gpu%E7%89%88%E6%9C%AC%E7%9A%84%E7%BC%96%E8%AF%91/)
+* [安装tensorflow，那叫一个坑啊](https://www.cnblogs.com/shihuc/p/6593041.html)
+* [使用bazel 编译tensorflow serving时报错：fatal error: Python.h: No such file or directory](https://www.aliyun.com/jiaocheng/123469.html)
+* [What is Bazel in TensorFlow? When do I need to build again?](https://stackoverflow.com/questions/35422388/what-is-bazel-in-tensorflow-when-do-i-need-to-build-again)
+* [tensorflow 之 bazel安装 & 使用](https://blog.csdn.net/u010700335/article/details/69422282)
+* [How to install Tensorflow GPU with CUDA Toolkit 9.1 and cuDNN 7.1.2 for Python 3 on Ubuntu 16.04-64bit](http://www.python36.com/install-tensorflow141-gpu/)
+* [NVIDIA TensorRT使用记录](https://www.jianshu.com/p/59fe26073a41)
+* [NVIDIA TensorRT Download](https://developer.nvidia.com/nvidia-tensorrt-download)
+* [How to install python3-devel on red hat 7](https://stackoverflow.com/questions/43047284/how-to-install-python3-devel-on-red-hat-7)
+* [gcc failed and fatal error: infiniband/verbs.h: No such file or directory](https://github.com/tensorflow/tensorflow/issues/9966)
+* [深度学习利器: TensorFlow系统架构及高性能程序设计](http://www.sohu.com/a/136025802_116235)
+* [CentOS查看CPU温度](https://blog.csdn.net/jajavaja/article/details/48212009)
+* [how to import function from models.py to run a cron job?](https://stackoverflow.com/questions/34939305/how-to-import-function-from-models-py-to-run-a-cron-job)
+* [TensorFlow学习一：源码安装](https://blog.csdn.net/u013832707/article/details/73161071)
+* [确定自己的TensorFlow是CPU还是GPU的版本](https://blog.csdn.net/zlase/article/details/79261348)
+* [How to test tensorflow cifar10 cnn tutorial model](https://stackoverflow.com/questions/33784214/how-to-test-tensorflow-cifar10-cnn-tutorial-model)
+* [TensorFlow CNN 测试CIFAR-10数据集](https://blog.csdn.net/yhl_leo/article/details/50738311)
+* [利用tensorflow搭建CIFAR10 分类网络](https://blog.csdn.net/CZ626626/article/details/65627598)
+* [TensorFlow指定GPU使用及监控GPU占用情况](https://www.cnblogs.com/helloyy/p/7878201.html)
+
 * [深度学习指南：基于Ubuntu从头开始搭建环境](https://blog.csdn.net/happytofly/article/details/80123546)
-* []()
