@@ -244,6 +244,20 @@ bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl 
 ```
 
+## 测试 TensorFlow GPU
+* 下载 tensorflow models
+```shell
+git clone https://github.com/tensorflow/models.git 
+```
+
+* 训练 cifar10 （花费了4个小时）
+```shell
+cd models/tutoricals/image/cifar10
+python3 cifar10_train.py
+```
+![](tensorflow_training_cifar10_gpu.png)
+**训练 cifar10 GPU使用情况：内存不够用，GPU处理器85％左右，带宽使用了20％**
+
 ## FAQ
 * 安装失败。错误信息：`Warning: /dev/root does not exist` 解决方法：
 
@@ -263,24 +277,28 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.wh
     **可能同时安装了 CPU 和 GPU 版的 TensorFlow**
     
     * 卸载 TensorFlow CPU 和 GPU 版本
-    ```shell
+```shell
     sudo pip uninstall tensorflow
     sudo pip uninstall tensorflow-gpu 
-    ```
+```
     * 安装 TensorFlow GPU 版本
-    ```shell
+```shell
     sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl 
-    ```
+```
 
 ## 参考资料
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown语法说明（详解版）](http://www.ituring.com.cn/article/504)
 * [Markdown 语法快速入门手册](https://www.w3cschool.cn/markdownyfsm/markdownyfsm-odm6256r.html)
+
 * [U盘安装centos7解决could not boot，/dev/root/does not exit](https://blog.csdn.net/u012140170/article/details/40423645)
 * [u盘安装centos7 /dev/root does not exist 导致无法安装解决方案](https://blog.csdn.net/bajiudongfeng/article/details/47732377)
+
 * [CentOS 7.0 下 GPU 安装配置指南及 TensorFlow / Openface 的 GPU 使用](https://www.jianshu.com/p/75e7053bdd43)
 * [centos7下安装部署tensorflow GPU 版本](https://cloud.tencent.com/info/be0c8667decbadc9588cd68e5289cfd3.html)
+* [Installing tensorflow-gpu on CentOS 6.8](https://stackoverflow.com/questions/45081855/installing-tensorflow-gpu-on-centos-6-8)
 * [NVIDIA cuda7在centos6.5中的安装](https://blog.csdn.net/syx19930206/article/details/47253861)
+
 * [lspci命令](http://man.linuxde.net/lspci)
 * [CentOS中禁用nouveau驱动](https://blog.csdn.net/cmzsteven/article/details/49049327)
 * [centos关机与重启命令](https://www.cnblogs.com/endv/p/6622452.html)
