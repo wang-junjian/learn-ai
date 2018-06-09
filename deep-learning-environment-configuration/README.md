@@ -138,8 +138,9 @@ wget https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-baz
 sudo mv vbatts-bazel-epel-7.repo /etc/yum.repos.d/
 sudo yum install bazel
 ```
-* [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
-* [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
+
+    * [Installing Bazel on Fedora and CentOS](https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md)
+    * [Fedora COPR bazel](https://copr.fedorainfracloud.org/coprs/vbatts/bazel/)
 
 * Configure
 ```shell
