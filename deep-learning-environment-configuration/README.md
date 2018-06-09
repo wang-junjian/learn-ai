@@ -252,16 +252,14 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.wh
     * 重启系统，回到CentOS安装菜单，在菜单项 Install CentOS 7 按 e 键进行编辑模式，修改`linuxefi /images/vmlinuz inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet` 为 `linuxefi /images/vmlinuz inst.stage2=hd:/dev/sdb4 quiet`
     * 按`ctrl+x`，重启系统。
 
-* import tensorflow 失败。错误信息：`ImportError: cannot import name 'abs'` 解决方法：
-    
-    > 详细错误信息
-    
-    > File "/usr/lib/python3.6/site-packages/tensorflow/python/keras/backend/__init__.py", line 22, in <module>
-    
-    > from tensorflow.python.keras._impl.keras.backend import abs
-    
-    > ImportError: cannot import name 'abs'
-
+* import tensorflow 失败。
+**错误信息：**
+```
+    File "/usr/lib/python3.6/site-packages/tensorflow/python/keras/backend/__init__.py", line 22, in <module>    
+    from tensorflow.python.keras._impl.keras.backend import abs    
+    ImportError: cannot import name 'abs'
+```    
+**解决方法：**
     **可能同时安装了 CPU 和 GPU 版的 TensorFlow**
     
     * 卸载 TensorFlow CPU 和 GPU 版本
