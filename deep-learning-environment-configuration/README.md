@@ -265,23 +265,42 @@ python3 cifar10_train.py
 ![](tensorflow_training_cifar10_gpu.png)
 
 ## FAQ
-* 安装失败。错误信息：`Warning: /dev/root does not exist` 解决方法：
+### 安装 CentOS7 失败。
+#### 错误信息：
+`Warning: /dev/root does not exist` 
+
+#### 解决方法：
 
     * 查看U盘启动盘的文件名，在命令行输入：`ls /dev`，我的U盘文件名是sdb4。
         > 如果不知道的话，可以运行一次命令，然后拔下U盘，再运行一次命令，对比两次的结果，看看少了哪个文件名。
     * 重启系统，回到CentOS安装菜单，在菜单项 Install CentOS 7 按 e 键进行编辑模式，修改`linuxefi /images/vmlinuz inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet` 为 `linuxefi /images/vmlinuz inst.stage2=hd:/dev/sdb4 quiet`
     * 按`ctrl+x`，重启系统。
 
-* import tensorflow 失败。
+### 编译 tensorflow 失败。
+#### 错误信息：
+`fatal error: Python.h: No such file or directory` 
 
-**错误信息：**
+#### 解决方法：
+    * 安装 python-devel
+    `yum install python-devel`
+
+### 编译 tensorflow 失败。
+#### 错误信息：
+`gcc failed and fatal error: infiniband/verbs.h: No such file or directory` 
+
+#### 解决方法：
+* 安装 libibverbs-devel
+`yum install libibverbs-devel`
+
+### import tensorflow 失败。
+#### 错误信息：
 ```
     File "/usr/lib/python3.6/site-packages/tensorflow/python/keras/backend/__init__.py", line 22, in <module>    
     from tensorflow.python.keras._impl.keras.backend import abs    
     ImportError: cannot import name 'abs'
 ```    
-**解决方法：**
-    **可能同时安装了 CPU 和 GPU 版的 TensorFlow**
+#### 解决方法：
+> 可能同时安装了 CPU 和 GPU 版的 TensorFlow**
     
     * 卸载 TensorFlow CPU 和 GPU 版本
 ```shell
@@ -307,6 +326,7 @@ python3 cifar10_train.py
 * [CentOS 7中以runfile形式安装CUDA 9.0](https://www.cnblogs.com/alliance/p/7905657.html)
 * [什么方式可以实现init3方式启动又能快速使用图形](http://tieba.baidu.com/f?kz=2065847097&mo_device=1&ssid=0&from=1000539d&uid=0&pu=usm@1,sz@1320_2001,ta@iphone_1_11.3_3_605&bd_page_type=1&baiduid=00D058CFE90959DB7374FA43FDE5A43E&tj=www_normal_3_0_10_title&referer=m.baidu.com?pn=0&&red_tag=p0293373883)
 
+* [CentOS 7 运行级别切换](https://www.cnblogs.com/lanston/p/3880577.html)
 * [lspci命令](http://man.linuxde.net/lspci)
 * [TensorRT简介](https://blog.csdn.net/fengbingchun/article/details/78469551)
 * [What is SYCL 1.2?](https://stackoverflow.com/questions/41831214/what-is-sycl-1-2/41877617)
