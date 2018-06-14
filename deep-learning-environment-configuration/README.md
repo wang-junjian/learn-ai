@@ -63,9 +63,17 @@ sudo sh cuda_9.2.88_396.26_linux.run
 
     Enter CUDA Samples Location
     [ default is /home/wjunjian ]: 
+```
 
+* 安装补丁包
+
+```shell
 sudo sh cuda_9.2.88.1_linux.run
+```
 
+* 配置环境变量
+
+```shell
 sudo nano /etc/profile
     export PATH=/usr/local/cuda-9.2/bin:$PATH
     export LD_LIBRARY_PATH=/usr/local/cuda-9.2/lib64:$LD_LIBRARY_PATH
