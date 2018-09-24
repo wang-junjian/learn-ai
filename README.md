@@ -16,3 +16,4 @@
 
 ## 我的AI开源项目
 * [基于 facenet 的人脸识别系统](https://github.com/wang-junjian/face-recognition-system)
+* [人脸识别服务](https://github.com/wang-junjian/face-recognition-services)
