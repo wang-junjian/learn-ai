@@ -9,6 +9,11 @@
 * [深度学习环境配置](deep-learning-environment-configuration/)
 * [视觉挑战赛数据格式](https://github.com/wang-junjian/vision-challenge)
 
+* [Apache MXNet 中文资源](https://zh.mxnet.io)
+    > [动手学深度学习](http://zh.gluon.ai)
+    > [博客](https://zh.mxnet.io/blog/)
+    > [论坛](https://discuss.gluon.ai)
+
 ## AI大学
 * [阿里云天池AI学习](https://tianchi.aliyun.com/learn/index.htm)
 * [百度AI公开课](https://ai.baidu.com/paddlepaddle/openCourses)
