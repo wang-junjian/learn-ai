@@ -9,10 +9,12 @@
 * [深度学习环境配置](deep-learning-environment-configuration/)
 * [视觉挑战赛数据格式](https://github.com/wang-junjian/vision-challenge)
 
-* [Apache MXNet 中文资源](https://zh.mxnet.io)
-    > [动手学深度学习](http://zh.gluon.ai)
-    > [博客](https://zh.mxnet.io/blog/)
-    > [论坛](https://discuss.gluon.ai)
+## 深度学习框架及资源
+| 框架 | GitHub | 文档 | 交流 |
+|-----|--------|------|-----|
+|[MXNet](https://mxnet.incubator.apache.org)|[源代码](https://github.com/apache/incubator-mxnet)|[Tutorials](https://mxnet.incubator.apache.org/tutorials/index.html)<br> [中文资源](https://zh.mxnet.io)<br> [动手学深度学习](http://zh.gluon.ai)|[博客](https://zh.mxnet.io/blog/)<br> [论坛](https://discuss.gluon.ai)|
+|[PyTorch](https://pytorch.org)|[源代码](https://github.com/pytorch/pytorch)|[Tutorials](https://pytorch.org/tutorials/)<br> [中文教程](http://pytorch.apachecn.org/cn/tutorials/index.html)<br> [中文文档](https://pytorch-cn.readthedocs.io/zh/latest/)||
+|[TensorFlow](https://tensorflow.google.cn)|[源代码](https://github.com/tensorflow/tensorflow)|[Tutorials](https://tensorflow.google.cn/tutorials/)|[社区](https://tensorflow.google.cn/community/)|
 
 ## AI大学
 * [阿里云天池AI学习](https://tianchi.aliyun.com/learn/index.htm)
