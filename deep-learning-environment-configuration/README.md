@@ -27,7 +27,7 @@ sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -img)-r.nouveau
 sudo dracut /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 
-* 下载 [CUDA Toolkit](https://developer.nvidia.com/cuda-release-candidate-download)
+* 下载 [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 * 安装 CUDA Toolkit
 
 ```shell
