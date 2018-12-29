@@ -108,8 +108,13 @@ watch -n 0.1 -d nvidia-smi
 ```
 
 ## 参考资料
+* [High Performance Computing](https://developer.nvidia.com/computeworks)
 * [Ubuntu18+cuda9.0+cudnn+tensorflow+GPU（1080Ti）+protobuf-3.6.0](https://blog.csdn.net/m0_37407756/article/details/80769952)
 * [深度学习环境配置:Ubuntu16.04安装GTX1080Ti+CUDA9.0+cuDNN7](https://www.cnblogs.com/tanwc/p/9375161.html)
+* [Ubuntu16.04+1080(Ti)显卡驱动+CUDA+cuDNN](https://blog.csdn.net/lwplwf/article/details/79881699)
+* [搭建深度学习服务器Ubuntu 16.04 LTS + GTX 1080Ti](https://www.jianshu.com/p/4e64cb45a5a4)
+* [Ubuntu16.04 + 1080Ti深度学习环境配置教程](https://www.jianshu.com/p/5b708817f5d8)
+* [ubuntu 16.04 安装 gtx 1080ti](https://blog.csdn.net/lewif/article/details/79083452)
 * [Ubuntu 16.04安装NVIDIA驱动后导致的循环登录问题](https://blog.csdn.net/gavinmiaoc/article/details/79748689)
 * [nvidia-smi 实时刷新 实时显示显存使用情况](https://blog.csdn.net/sinat_26871259/article/details/82684582)
 * [Login failure, kick me back to greeter](https://ubuntuforums.org/showthread.php?t=2361640)
