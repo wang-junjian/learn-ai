@@ -29,8 +29,9 @@ sudo update-initramfs -u
 lsmod | grep nouveau
 ```
 
-* 下载[CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal)
-* 下载[cuDNN](https://developer.nvidia.com/rdp/cudnn-download)
+* 下载
+[CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal)
+[cuDNN](https://developer.nvidia.com/rdp/cudnn-download)
 
 * 安装CUDA Toolkit
 ```bash
