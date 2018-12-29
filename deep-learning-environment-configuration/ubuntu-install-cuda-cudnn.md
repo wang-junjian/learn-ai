@@ -1,4 +1,8 @@
-* 安装[Ubuntu 18.04.1 LTS](http://releases.ubuntu.com/18.04.1/)
+# 在Ubuntu上安装CUDA和cuDNN
+
+* 安装Ubuntu
+[Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+[Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
 
 * 准备工作
 ```bash
@@ -68,6 +72,11 @@ sudo make
 ./mnistCUDNN
 ```
 
+* 卸载Nvidia驱动
+```bash
+nvidia-uninstall
+```
+
 * 安装pip
 ```bash
 # python 2.7
@@ -76,7 +85,31 @@ sudo apt install python-pip
 sudo apt install python3-pip
 ```
 
-* 安装TensorFlow GPU
+* 安装[TensorFlow](https://www.tensorflow.org/install/)
 ```bash
 sudo pip3 install tensorflow-gpu
 ```
+
+* 安装[PyTorch](https://pytorch.org)
+```bash
+sudo pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+sudo pip3 install torchvision
+```
+
+* 运行pytorch-cifar
+```bash
+git clone https://github.com/kuangliu/pytorch-cifar.git
+python3 main.py --lr=0.01
+```
+
+* 监控GPU
+```bash
+watch -n 0.1 -d nvidia-smi
+```
+
+## 参考资料
+* [Ubuntu18+cuda9.0+cudnn+tensorflow+GPU（1080Ti）+protobuf-3.6.0](https://blog.csdn.net/m0_37407756/article/details/80769952)
+* [深度学习环境配置:Ubuntu16.04安装GTX1080Ti+CUDA9.0+cuDNN7](https://www.cnblogs.com/tanwc/p/9375161.html)
+* [Ubuntu 16.04安装NVIDIA驱动后导致的循环登录问题](https://blog.csdn.net/gavinmiaoc/article/details/79748689)
+* [nvidia-smi 实时刷新 实时显示显存使用情况](https://blog.csdn.net/sinat_26871259/article/details/82684582)
+* [Login failure, kick me back to greeter](https://ubuntuforums.org/showthread.php?t=2361640)
