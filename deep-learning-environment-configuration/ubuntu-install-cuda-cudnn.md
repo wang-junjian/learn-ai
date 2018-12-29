@@ -1,8 +1,8 @@
 # 在Ubuntu上安装CUDA和cuDNN
 
 * 安装Ubuntu
-[Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
-[Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
+    * [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+    * [Ubuntu 18.04](http://releases.ubuntu.com/18.04/)
 
 * 准备工作
 ```bash
@@ -30,8 +30,8 @@ lsmod | grep nouveau
 ```
 
 * 下载
-[CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal)
-[cuDNN](https://developer.nvidia.com/rdp/cudnn-download)
+    * [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal)
+    * [cuDNN](https://developer.nvidia.com/rdp/cudnn-download)
 
 * 安装CUDA Toolkit
 ```bash
