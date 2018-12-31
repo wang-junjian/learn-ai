@@ -271,7 +271,7 @@ cd models/tutoricals/image/cifar10
 python3 cifar10_train.py
 ```
 **训练 cifar10 GPU使用情况：内存不够用，GPU处理器85％左右，带宽使用了20％**
-![](tensorflow_training_cifar10_gpu.png)
+![](images/tensorflow_training_cifar10_gpu.png)
 
 ## FAQ
 ### 安装 CentOS7 失败。
