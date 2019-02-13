@@ -9,6 +9,8 @@
 * [深度学习环境配置](deep-learning-environment-configuration/)
 * [视觉挑战赛数据格式](https://github.com/wang-junjian/vision-challenge)
 
+* [AI访谈](ai-interview/)
+
 ## 深度学习框架及资源
 | 框架 | GitHub | 文档 | 交流 |
 |-----|--------|------|-----|
