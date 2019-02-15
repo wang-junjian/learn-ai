@@ -7,6 +7,8 @@
 * 准备工作
 ```bash
 sudo apt update
+sudo apt install gcc
+sudo apt install make
 sudo apt install nvidia-smi
 ```
 
