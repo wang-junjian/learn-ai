@@ -5,6 +5,7 @@
 * [基于 facenet 的人脸识别系统](https://github.com/wang-junjian/face-recognition-system)
 * [目标追踪 Object Tracking](https://github.com/wang-junjian/learn-opencv/tree/master/object-tracking)
 * [使用YOLOv3对压板开关状态的识别](https://github.com/wang-junjian/customize-training-with-yolov3)
+* [银行卡号位置检测实战](https://github.com/wang-junjian/text-detection-ctpn)
 
 ## 我的AI实践
 * [深度学习机器配置](deep-learning-machine-configuration/)
